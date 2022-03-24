@@ -66,7 +66,7 @@ int binary_tree_is_full(const binary_tree_t *tree)
 	}
 	a = binary_tree_is_full(tree->left);
 	b = binary_tree_is_full(tree->right);
-	full = min_value(a, b);	
+	full = min_value(a, b);
 
 	return (full);
 }
