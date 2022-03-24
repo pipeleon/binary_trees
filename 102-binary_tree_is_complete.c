@@ -48,7 +48,8 @@ size_t min_value(size_t a, size_t b)
 /**
  * check_complete - check completition
  * @tree: Binary tree to go trough
- * @level: Level
+ * @size: size of tree
+ * @index: Index
  *
  * Return: void
  */
@@ -58,8 +59,8 @@ int check_complete(const binary_tree_t *tree, int size, int index)
 		return (1);
 	if (index >= size)
 		return (0);
-	
-	return (min_value(check_complete(tree->left, size, 2 * index + 1), 
+
+	return (min_value(check_complete(tree->left, size, 2 * index + 1),
 		check_complete(tree->right, size, 2 * index + 2)));
 }
 
@@ -80,6 +81,6 @@ int binary_tree_is_complete(const binary_tree_t *tree)
 
 	size_tree = binary_tree_size(tree);
 	i = 0;
-	
+
 	return (check_complete(tree, size_tree, i));
 }
