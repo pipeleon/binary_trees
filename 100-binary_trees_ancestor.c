@@ -13,6 +13,8 @@ binary_tree_t *binary_trees_ancestor(
 {
 	binary_tree_t *tmp, *tmp2, *tmp3;
 
+	if (first == NULL || second == NULL)
+		return (NULL);
 	tmp = first->parent;
 	tmp2 = second->parent;
 
