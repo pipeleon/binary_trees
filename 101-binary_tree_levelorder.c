@@ -34,7 +34,7 @@ size_t binary_tree_height(const binary_tree_t *tree)
 	{
 		return (0);
 	}
-	
+
 	height = 1
 		+ max_value(binary_tree_height(tree->left), binary_tree_height(tree->right));
 
@@ -63,7 +63,7 @@ void currentlevel(const binary_tree_t *tree, void (*func)(int), int level)
 }
 
 /**
- * binary_tree_levelorder - Goes through a binary tree using level-order traversal
+ * binary_tree_levelorder - Goes through using level-order traversal
  * @tree: Binary tree to go trough
  * @func: Funtion to use
  *
@@ -72,6 +72,7 @@ void currentlevel(const binary_tree_t *tree, void (*func)(int), int level)
 void binary_tree_levelorder(const binary_tree_t *tree, void (*func)(int))
 {
 	int i, height;
+	
 	if (tree == NULL || func == NULL)
 	{
 		return;
