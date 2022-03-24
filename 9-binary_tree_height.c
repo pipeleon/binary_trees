@@ -2,14 +2,14 @@
 /* Task 9 - 0x1D. C - Binary trees */
 
 /**
- * max_value - max value 
+ * max_value - max value
  * @a: First
  * @b: Second
  *
  * Return: max value
  */
- size_t max_value(size_t a, size_t b)
- {
+size_t max_value(size_t a, size_t b)
+{
 	if (a > b)
 	{
 		return (a);
@@ -18,7 +18,7 @@
 	{
 		return (b);
 	}
- }
+}
 
 /**
  * binary_tree_height - measures the height of a binary tree
@@ -38,7 +38,8 @@ size_t binary_tree_height(const binary_tree_t *tree)
 	{
 		return (0);
 	}
-	height = 1 + max_value(binary_tree_height(tree->left), binary_tree_height(tree->right));
+	height = 1
+		+ max_value(binary_tree_height(tree->left), binary_tree_height(tree->right));
 
 	return (height);
 }
