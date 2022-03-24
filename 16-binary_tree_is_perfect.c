@@ -92,8 +92,6 @@ int binary_tree_is_perfect(const binary_tree_t *tree)
 		perfect = perfect * 2;
 	}
 	perfect--;
-	printf("%d\n", perfect);
-	printf("%d\n", tree_size);
 	if (perfect == tree_size)
 	{
 		return (1);
