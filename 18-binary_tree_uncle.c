@@ -37,7 +37,11 @@ binary_tree_t *binary_tree_sibling(binary_tree_t *node)
  *
  * Return: pointer to the uncle
  */
- binary_tree_t *binary_tree_uncle(binary_tree_t *node)
- {
-	 return (binary_tree_sibling(node->parent));
- }
+binary_tree_t *binary_tree_uncle(binary_tree_t *node)
+{
+	if (node == NULL)
+	{
+		return (NULL);
+	}
+	return (binary_tree_sibling(node->parent));
+}
